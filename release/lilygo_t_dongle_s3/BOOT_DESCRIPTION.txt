@@ -1,0 +1,24 @@
+LilyGO T-Dongle S3 firmware image set
+
+Flash layout:
+0x0000  bootloader.bin
+0x8000  partitions.bin
+0x10000 firmware.bin
+
+Relative paths from repository root:
+release/lilygo_t_dongle_s3/bootloader.bin
+release/lilygo_t_dongle_s3/partitions.bin
+release/lilygo_t_dongle_s3/firmware.bin
+
+PlatformIO source build output paths:
+.pio/build/lilygo_t_dongle_s3/bootloader.bin
+.pio/build/lilygo_t_dongle_s3/partitions.bin
+.pio/build/lilygo_t_dongle_s3/firmware.bin
+
+Example flashing methods:
+- scripts/flash-project.ps1 -Port COM18
+- scripts/flash-prebuilt.ps1 -Port COM18
+- scripts/all-in-one.ps1 -Port COM18
+
+This file intentionally uses repository-relative paths only.
+This release bundle contains no machine-local absolute paths.
