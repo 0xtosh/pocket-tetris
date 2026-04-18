@@ -150,10 +150,10 @@ const char kControllerPage[] PROGMEM = R"HTML(
     .title .pocket { color:#9bd8ff; }
     .title .tetris { color:#ffd166; }
     .subtitle { margin:0; font-size:0.82rem; letter-spacing:0.22em; text-transform:uppercase; color:#b9c0d4; }
-    .stats { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:12px 14px; display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
-    .stat { flex:1 1 0; min-width:0; display:grid; gap:4px; justify-items:center; align-content:start; text-align:center; }
-    .stat b { display:flex; align-items:flex-start; justify-content:center; gap:5px; font-size:1rem; white-space:nowrap; line-height:1.1; }
-    .label { font-size:1rem; letter-spacing:0.04em; text-transform:uppercase; color:#bdbdbd; white-space:nowrap; line-height:1.1; }
+    .stats { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:12px 14px; display:flex; justify-content:space-between; align-items:flex-start; gap:6px; }
+    .stat { flex:1 1 0; min-width:0; display:grid; gap:3px; justify-items:center; align-content:start; text-align:center; }
+    .stat b { display:flex; align-items:flex-start; justify-content:center; gap:4px; font-size:0.82rem; white-space:nowrap; line-height:1.1; }
+    .label { font-size:0.78rem; letter-spacing:0.04em; text-transform:uppercase; color:#bdbdbd; white-space:nowrap; line-height:1.1; }
     .pad { display:grid; grid-template-columns: 1fr; gap:20px; }
     .cluster { background:rgba(255,255,255,0.05); border-radius:22px; padding:16px; }
     .controls { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:92px 92px 84px 52px; gap:12px; }
@@ -171,14 +171,15 @@ const char kControllerPage[] PROGMEM = R"HTML(
     .empty { visibility:hidden; }
     .stacked { flex-direction:column; gap:6px; }
     .subtext { font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.78); }
-    .score-level { font-size:1rem; color:#b9ecff; letter-spacing:0.04em; text-transform:uppercase; line-height:1.1; }
-    .score-record { font-size:1rem; color:#ffd166; letter-spacing:0.04em; text-transform:uppercase; line-height:1.1; }
+    .score-level { font-size:0.82rem; color:#b9ecff; letter-spacing:0.04em; text-transform:uppercase; line-height:1.1; }
+    .score-record { font-size:0.82rem; color:#ffd166; letter-spacing:0.04em; text-transform:uppercase; line-height:1.1; }
     .footer { text-align:center; color:#a3a3a3; font-size:0.85rem; }
     @media (max-width: 460px) {
       .shell { width:100vw; }
       .stats { padding:10px 10px; gap:4px; }
       .stat { gap:3px; }
-      .stat b { gap:3px; }
+      .stat b { gap:3px; font-size:0.76rem; }
+      .label, .score-level, .score-record { font-size:0.72rem; }
       .controls { grid-template-rows:84px 84px 78px 46px; }
       .arrow svg { width:30px; height:30px; }
       .restart { min-height:30px !important; margin-top:12px; }
