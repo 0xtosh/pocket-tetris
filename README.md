@@ -2,15 +2,20 @@
 
 Pocket Tetris turns the LilyGO T-Dongle S3 into a tiny arcade cabinet with a built-in screen, a captive-portal browser controller, a QR-code idle screen, and a full-color 10x20 Tetris playfield.
 
-The board boots into WiFi info mode, shows a QR code on the display, and hosts its own controller page. Join the board's network, tap into the portal, and start stacking blocks.
+<div align="center">
+  <img src="demo/playdemo.gif" width="250" align="top">
+  &nbsp;&nbsp;
+  <img src="demo/captive_portal_controls.jpg" width="250" align="top">
+</div>
+
+The board boots into WiFi info mode, shows a QR code on the display, and hosts its own controller page. Scan the QR code, join the board's network, push the button, tap into the portal and start playing Tetris.
 
 ## What It Does
 
 - Runs directly on the LilyGO T-Dongle S3 with the built-in 80x160 ST7735 display
-- Uses a proven `esp_lcd` ST7735 init path for reliable display bring-up
 - Shows a QR code on the device screen before gameplay starts
 - Hosts a browser gamepad with live score, high score, level, lines, and state
-- Uses captive-portal style redirects to help phones open the controller page quickly
+- Uses captive-portal style redirects to help phones open the controller page quickly without having to know URLs
 - Tracks boot-session high score and highest level reached
 - Uses 10 color themes across levels 0 through 9
 - Includes ready-to-flash firmware binaries in `release/lilygo_t_dongle_s3/`
@@ -24,8 +29,13 @@ The board boots into WiFi info mode, shows a QR code on the display, and hosts i
 
 ## Network
 
+![ar code](demo/qrcode_mode.jpg)
+
+The QR code contains the following:
 - SSID: `games`
 - Password: `gamesgames`
+
+Behind the scenes:
 - Controller page: `http://192.168.4.1/`
 - WebSocket port: `81`
 - UDP port: `10000`
@@ -33,7 +43,7 @@ The board boots into WiFi info mode, shows a QR code on the display, and hosts i
 ## How To Play
 
 1. Power the board.
-2. Scan the QR code or join WiFi `games` with password `gamesgames`.
+2. Scan the QR code or join WiFi `games` with password `gamesgames` and short-press the button once.
 3. If the captive portal does not pop up automatically, open `http://192.168.4.1/`.
 4. Press `Restart` on the controller page to begin a new round.
 5. Use the browser controls to move, rotate, soft drop, and hard drop pieces.
